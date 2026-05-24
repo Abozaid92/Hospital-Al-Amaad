@@ -70,7 +70,7 @@ L.Icon.Default.mergeOptions({
 });
 
 /* ═══════════════════════════════════════════════════════════════
-   i18n Configuration
+   i18n Configuration — Single Unified Translation Source
    ═══════════════════════════════════════════════════════════════ */
 i18n.use(initReactI18next).init({
   resources: {
@@ -81,22 +81,29 @@ i18n.use(initReactI18next).init({
           specialties: "Specialties",
           doctors: "Doctors",
           about: "About",
-          contact: "Contact",
+          bookSection: "Contact",
           book: "Book Appointment",
+          hospital: "Hospital",
+          langToggle: "العربية",
         },
         hero: {
-          tagline: "Where Healing Meets Innovation",
-          title: "Your Health, Our",
-          titleHighlight: "Sacred Mission",
+          badge: "Advanced Medical Excellence",
+          title: "Exceptional",
+          titleHighlight: "Healthcare Experience",
           subtitle:
-            "Experience world-class healthcare with cutting-edge technology and compassionate experts dedicated to your wellbeing.",
-          ctaPrimary: "Book Consultation",
-          ctaSecondary: "Meet Our Doctors",
-          stats: {
-            patients: "Happy Patients",
-            doctors: "Expert Doctors",
-            years: "Years of Trust",
-            awards: "Awards Won",
+            "Delivering world-class medical services with advanced technology, compassionate care, and a premium patient experience designed for your comfort and recovery.",
+          ctaPrimary: "Book An Appointment",
+          ctaSecondary: "Explore Services",
+          scroll: "Scroll",
+          card: {
+            liveMonitoring: "Live Medical Monitoring",
+            title: "AI Smart Healthcare System",
+            subtitle:
+              "Advanced real-time monitoring platform designed for premium medical experiences and modern patient care.",
+            accreditationTitle: "International Medical Accreditation",
+            accreditationDesc:
+              "Globally trusted healthcare standards with premium patient safety.",
+            floatingBadge: "#1 Smart Medical Center",
           },
         },
         specialties: {
@@ -131,6 +138,32 @@ i18n.use(initReactI18next).init({
               desc: "Medical and cosmetic skin care using the latest laser and aesthetic technologies.",
             },
           ],
+          advanced: {
+            badge: "Advanced Medical Systems",
+            heading: "Our Specialties",
+            sub: "Next-generation medical intelligence powered by artificial intelligence, cinematic diagnostics, and futuristic healthcare systems.",
+            cta: "Explore specialty",
+            cards: [
+              {
+                id: "01",
+                title: "Oncology Intelligence",
+                desc: "AI-powered early detection and precise microscopic analysis for oncology diagnostics.",
+                stats: ["98.7% Accuracy", "AI Enhanced", "Live Analysis"],
+              },
+              {
+                id: "02",
+                title: "Neural Mapping",
+                desc: "Advanced brain topology visualization and neurological diagnostic systems.",
+                stats: ["3D Mapping", "Neural Scan", "Smart Detection"],
+              },
+              {
+                id: "03",
+                title: "Cardiac Analysis",
+                desc: "Real-time cardiac imaging with AI anomaly detection and predictive monitoring.",
+                stats: ["Heart Monitor", "AI Prediction", "Realtime ECG"],
+              },
+            ],
+          },
         },
         whyUs: {
           tagline: "Why Al-Amed",
@@ -138,6 +171,7 @@ i18n.use(initReactI18next).init({
           titleHighlight: "The Details",
           subtitle:
             "We combine medical excellence with human compassion to deliver an unparalleled healthcare experience.",
+          jciAccredited: "JCI ACCREDITED",
           features: [
             {
               title: "24/7 Emergency Care",
@@ -192,22 +226,56 @@ i18n.use(initReactI18next).init({
           titleHighlight: "Trust",
           subtitle:
             "Real stories from real patients whose lives we have had the privilege to touch.",
+          defaultName: "Patient",
           items: [
             {
-              name: "Amira Khalil",
-              text: "After my heart surgery, the care I received was beyond anything I imagined. Dr. El-Masry saved my life, and the nursing staff treated me like family. I am forever grateful.",
+              name: "Ahmed Sayed",
+              role: "Cardiology Patient",
+              title: "Excellent Experience",
+              review:
+                "Excellent service from reception to follow-up. The team was professional and caring.",
             },
             {
-              name: "Omar Hossam",
-              text: "My daughter was diagnosed with a rare condition. The pediatric team at Al-Amed went above and beyond, coordinating with specialists worldwide. Today, she is thriving. Thank you, Dr. Nour.",
+              name: "Sarah Johnson",
+              role: "Parent",
+              title: "Professional Care",
+              review:
+                "Very clean environment and excellent organization. The doctors explained everything clearly.",
             },
             {
-              name: "Fatima Al-Rashid",
-              text: "The neurology department diagnosed my condition when three other hospitals could not. Their persistence and cutting-edge technology gave me answers and a treatment plan that changed my life.",
+              name: "Mohamed Ali",
+              role: "Neurology Patient",
+              title: "Attention to Details",
+              review:
+                "A very comfortable experience with fast service and real attention to every medical detail.",
             },
             {
-              name: "Youssef Mahmoud",
-              text: "I came in for a knee replacement terrified. The orthopedic team made me feel confident and cared for. Six months later, I am hiking again. Truly miraculous care.",
+              name: "Layla Hassan",
+              role: "Surgery Patient",
+              title: "Best Treatment Experience",
+              review:
+                "Very respectful staff and excellent follow-up after surgery. I felt comfortable and confident.",
+            },
+            {
+              name: "Khaled Omar",
+              role: "Dermatology Patient",
+              title: "Fast & Organized",
+              review:
+                "Booking was fast and everything was organized perfectly from check-in to checkout.",
+            },
+            {
+              name: "Nadia Ibrahim",
+              role: "Ophthalmology Patient",
+              title: "Premium Quality",
+              review:
+                "A very high-quality hospital with great cleanliness and a comfortable experience.",
+            },
+            {
+              name: "Tarek Mahmoud",
+              role: "Orthopedic Patient",
+              title: "Comfort & Trust",
+              review:
+                "Highly professional doctors, and I felt very comfortable and reassured throughout treatment.",
             },
           ],
         },
@@ -261,6 +329,82 @@ i18n.use(initReactI18next).init({
             hours: "Open 24 / 7",
           },
         },
+        booking: {
+          eyebrow: "Appointment Booking",
+          title: "Book Your Appointment in Minutes",
+          subtitle:
+            "Choose the specialty, then any available doctor, then the right time, and complete your details easily.",
+          panelTitle: "Medical care starts with easy booking",
+          panelSubtitle:
+            "A clean, fast, and friendly booking interface for modern hospital websites.",
+          step1: "Specialty",
+          step2: "Doctor",
+          step3: "Time",
+          step4: "Details",
+          selectSpecialty: "Select Specialty",
+          selectDoctor: "Select Doctor",
+          selectTime: "Select Time",
+          completeDetails: "Complete Details",
+          anyDoctor: "Any Available Doctor",
+          anyDoctorDesc: "The booking will go to the first available doctor.",
+          next: "Next",
+          back: "Back",
+          submit: "Confirm Booking",
+          successTitle: "Booking confirmed successfully",
+          successDesc: "We will contact you soon to confirm your appointment.",
+          newBooking: "New Booking",
+          bookingReference: "Booking reference",
+          fullName: "Full Name",
+          phone: "Phone Number",
+          email: "Email",
+          gender: "Gender",
+          selectGender: "Select",
+          male: "Male",
+          female: "Female",
+          dob: "Date of Birth",
+          appointmentDate: "Appointment Date",
+          availableTime: "Available Time",
+          notes: "Notes",
+          notesPlaceholder: "Write any additional notes...",
+          privacyAgree: "I agree to the privacy policy",
+          currentSummary: "Current summary",
+          notSelected: "Not selected",
+          doctorAssigned: "A doctor will be assigned after submission.",
+          selected: "Selected",
+          patientBookingInterface: "Patient Booking Interface",
+          medicalAppointmentUI: "Medical Appointment UI",
+          safeBooking: {
+            title: "Safe Booking",
+            desc: "Clear steps and a comfortable patient experience.",
+          },
+          fastSelection: {
+            title: "Fast Selection",
+            desc: "Choose the specialty and finish quickly.",
+          },
+          modernUI: {
+            title: "Modern UI",
+            desc: "Calm medical colors: blue + cyan.",
+          },
+          errors: {
+            required: "This field is required",
+            phoneInvalid: "Invalid phone number",
+            agreePrivacy: "You must agree to the privacy policy",
+            selectSpecialty: "Please select a specialty first",
+            selectTime: "Please select a time first",
+          },
+          specialties: {
+            cardio: "Cardiology",
+            internal: "Internal Medicine",
+            neuro: "Neurology",
+            pediatrics: "Pediatrics",
+            orthopedics: "Orthopedics",
+            surgery: "General Surgery",
+            urology: "Urology",
+            gynecology: "Obstetrics & Gynecology",
+            nephrology: "Nephrology",
+            vascular: "Vascular Surgery",
+          },
+        },
         chatbot: {
           title: "Al-Amed AI Assistant",
           subtitle: "Powered by Medical Intelligence",
@@ -273,10 +417,30 @@ i18n.use(initReactI18next).init({
             "Working hours",
             "Emergency care",
           ],
+          error: "Server connection error.",
         },
         footer: {
           rights: "All rights reserved.",
           tagline: "Healing with compassion, innovation, and excellence.",
+          copyright: "© 2026 Al-Amed Hospital.",
+          accreditation: "JCI Accredited / ISO 9001",
+          map: {
+            title: "Find us on the map",
+            address: "126 Nile Corniche, Cairo",
+            secureAccess: "Secure access",
+          },
+          benefits: {
+            title: "On-site benefits",
+            emergency: {
+              title: "Emergency 24/7",
+              desc: "Round-the-clock urgent care",
+            },
+            location: {
+              title: "Clear location",
+              desc: "Easy to reach by transport",
+            },
+          },
+          quickContact: "Quick contact",
         },
       },
     },
@@ -287,22 +451,29 @@ i18n.use(initReactI18next).init({
           specialties: "التخصصات",
           doctors: "الأطباء",
           about: "عنّا",
-          contact: "تواصل",
+          bookSection: "تواصل",
           book: "احجز موعد",
+          hospital: "المستشفى",
+          langToggle: "English",
         },
         hero: {
-          tagline: "حيث يلتقي الشفاء بالابتكار",
-          title: "صحتك،",
-          titleHighlight: "رسالتنا المقدسة",
+          badge: "التميز الطبي المتقدم",
+          title: "تجربه صحيه ",
+          titleHighlight: "  استثنائيه",
           subtitle:
-            "اختبر رعاية صحية عالمية المستوى مع تقنية متطورة وخبراء متعاطفون مكرسون لصحتك ورفاهيتك.",
-          ctaPrimary: "احجز استشارة",
-          ctaSecondary: "تعرّف على أطبائنا",
-          stats: {
-            patients: "مريض سعيد",
-            doctors: "طبيب خبير",
-            years: "سنة من الثقة",
-            awards: "جائزة عالمية",
+            "تقديم خدمات طبية عالمية المستوى بتقنية متقدمة، رعاية رحيمة، وتجربة مريض متميزة مصممة لراحتك وتعافيك.",
+          ctaPrimary: "احجز موعداً",
+          ctaSecondary: "استكشف خدماتنا",
+          scroll: "انتقل",
+          card: {
+            liveMonitoring: "مراقبة طبية حية",
+            title: "نظام الرعاية الصحية الذكي",
+            subtitle:
+              "منصة مراقبة في الوقت الفعلي مصممة لتجارب طبية متميزة ورعاية مريض حديثة.",
+            accreditationTitle: "الاعتماد الطبي الدولي",
+            accreditationDesc:
+              "معايير رعاية صحية موثوقة عالمياً مع سلامة مريض متميزة.",
+            floatingBadge: "المركز الطبي الذكي #1",
           },
         },
         specialties: {
@@ -337,6 +508,32 @@ i18n.use(initReactI18next).init({
               desc: "رعاية الجلد الطبية والتجميلية باستخدام أحدث تقنيات الليزر والتجميل.",
             },
           ],
+          advanced: {
+            badge: "أنظمة طبية متقدمة",
+            heading: "تخصصاتنا",
+            sub: "ذكاء طبي من الجيل القادم مدعوم بالذكاء الاصطناعي وأنظمة التشخيص السينمائية والرعاية الصحية المستقبلية.",
+            cta: "استكشف التخصص",
+            cards: [
+              {
+                id: "01",
+                title: "ذكاء علم الأورام",
+                desc: "كشف مبكر مدعوم بالذكاء الاصطناعي وتحليل مجهري دقيق لتشخيصات الأورام.",
+                stats: ["دقة 98.7%", "AI معزّز", "تحليل مباشر"],
+              },
+              {
+                id: "02",
+                title: "رسم الخرائط العصبية",
+                desc: "تصوير متقدم لطبولوجيا الدماغ وأنظمة التشخيص العصبي.",
+                stats: ["خرائط ثلاثية الأبعاد", "مسح عصبي", "كشف ذكي"],
+              },
+              {
+                id: "03",
+                title: "تحليل القلب",
+                desc: "تصوير قلبي في الوقت الفعلي مع كشف الشذوذات بالذكاء الاصطناعي والمراقبة التنبؤية.",
+                stats: ["مراقبة القلب", "توقعات AI", "رسم قلب فوري"],
+              },
+            ],
+          },
         },
         whyUs: {
           tagline: "لماذا الأعمد",
@@ -344,6 +541,7 @@ i18n.use(initReactI18next).init({
           titleHighlight: "في التفاصيل",
           subtitle:
             "نجمع بين التميز الطبي والتعاطف الإنساني لتقديم تجربة رعاية صحية لا مثيل لها.",
+          jciAccredited: "معتمد JCI",
           features: [
             {
               title: "طوارئ 24/7",
@@ -396,24 +594,57 @@ i18n.use(initReactI18next).init({
           tagline: "قصص المرضى",
           title: "أصوات",
           titleHighlight: "الثقة",
-          subtitle:
-            "قصص حقيقية من مرضى حقيقيين whom we had the privilege to touch their lives.",
+          subtitle: "قصص حقيقية من مرضى حقيقيين شرّفنا أن نلمس حياتهم.",
+          defaultName: "مريض",
           items: [
             {
-              name: "أميرة خليل",
-              text: "بعد جراحة قلبي، كانت الرعاية التي تلقيتها أعلى بكثير مما تخيلت. د. كريم أنقذ حياتي، والممرضات عاملوني مثل العائلة. أنا ممتنة إلى الأبد.",
+              name: "أحمد سيد",
+              role: "مريض قلب",
+              title: "تجربة ممتازة جدًا",
+              review:
+                "الخدمة كانت ممتازة جدًا من أول الاستقبال حتى المتابعة بعد الكشف، وفريق العمل كان محترم وواعي جدًا.",
             },
             {
-              name: "عمر حسام",
-              text: "تم تشخيص ابنتي بحالة نادرة. فريق طب الأطفال في الأعمد تجاوز كل التوقعات، منسقين مع أخصائيين حول العالم. اليوم، هي تزدهر. شكراً، د. نور.",
+              name: "سارة جونسون",
+              role: "ولي أمر",
+              title: "رعاية احترافية",
+              review:
+                "المكان نظيف جدًا والتنظيم ممتاز، والدكاترة شرحوا كل حاجة بهدوء واحترافية.",
             },
             {
-              name: "فاطمة الرشيد",
-              text: "قسم الأعصاب في الأعمد شخص حالتي بينما ثلاثة مستشفيات أخرى لم تستطع. مثابرتهم وتقنيتهم المتطورة أعطتني إجابات وخطة علاج غيرت حياتي.",
+              name: "محمد علي",
+              role: "مريض أعصاب",
+              title: "اهتمام بالتفاصيل",
+              review:
+                "التجربة كانت مريحة جدًا، والخدمة سريعة، وحسيت باهتمام حقيقي بكل التفاصيل الطبية.",
             },
             {
-              name: "يوسف محمود",
-              text: "أتيت لاستبدال ركبة وكنت مرعوباً. فريق العظام جعلني أشعر بالثقة والرعاية. بعد ستة أشهر، أنا أتنزه مجدداً. رعاية حقيقية معجزة.",
+              name: "ليلى حسن",
+              role: "مريض جراحة",
+              title: "أفضل تجربة علاج",
+              review:
+                "التعامل كان راقي جدًا والمتابعة بعد العملية كانت ممتازة، وحسيت براحة وثقة كبيرة.",
+            },
+            {
+              name: "خالد عمر",
+              role: "مريض جلدية",
+              title: "سرعة وتنظيم",
+              review:
+                "الحجز كان سريع جدًا، وكل حاجة كانت منظمة بشكل ممتاز من أول الدخول لحد الخروج.",
+            },
+            {
+              name: "نادية إبراهيم",
+              role: "مريض عيون",
+              title: "مستوى راقي",
+              review:
+                "المستشفى على مستوى عالي جدًا من النظافة والاهتمام، والتعامل كان مريح جدًا.",
+            },
+            {
+              name: "طارق محمود",
+              role: "مريض عظام",
+              title: "راحة وثقة",
+              review:
+                "الدكاترة محترفين جدًا، وحسيت براحة وثقة كبيرة أثناء العلاج والمتابعة.",
             },
           ],
         },
@@ -467,6 +698,82 @@ i18n.use(initReactI18next).init({
             hours: "مفتوح ٢٤/٧",
           },
         },
+        booking: {
+          eyebrow: "حجز موعد",
+          title: "احجز موعدك في دقائق",
+          subtitle:
+            "اختر التخصص، ثم أي طبيب متاح، وبعدها الوقت المناسب، وأكمل بياناتك بسهولة.",
+          panelTitle: "رعاية طبية تبدأ بحجز سهل",
+          panelSubtitle:
+            "واجهة حجز واضحة، سريعة، ومريحة تناسب مواقع المستشفيات الحديثة.",
+          step1: "التخصص",
+          step2: "الطبيب",
+          step3: "الوقت",
+          step4: "البيانات",
+          selectSpecialty: "اختر التخصص",
+          selectDoctor: "اختر الطبيب",
+          selectTime: "اختر الموعد",
+          completeDetails: "أكمل البيانات",
+          anyDoctor: "أي طبيب متاح",
+          anyDoctorDesc: "سيتم توجيه الحجز إلى أول طبيب متاح.",
+          next: "التالي",
+          back: "رجوع",
+          submit: "تأكيد الحجز",
+          successTitle: "تم تأكيد الحجز بنجاح",
+          successDesc: "سيتم التواصل معك قريبًا لتأكيد الموعد.",
+          newBooking: "حجز جديد",
+          bookingReference: "رقم الحجز",
+          fullName: "الاسم الكامل",
+          phone: "رقم الهاتف",
+          email: "البريد الإلكتروني",
+          gender: "النوع",
+          selectGender: "اختر",
+          male: "ذكر",
+          female: "أنثى",
+          dob: "تاريخ الميلاد",
+          appointmentDate: "تاريخ الموعد",
+          availableTime: "الموعد المتاح",
+          notes: "ملاحظات",
+          notesPlaceholder: "اكتب أي ملاحظات إضافية...",
+          privacyAgree: "أوافق على سياسة الخصوصية",
+          currentSummary: "الملخص الحالي",
+          notSelected: "غير محدد",
+          doctorAssigned: "سيتم تعيين الطبيب بعد الإرسال.",
+          selected: "تم الاختيار",
+          patientBookingInterface: "واجهة حجز المرضى",
+          medicalAppointmentUI: "Medical Appointment UI",
+          safeBooking: {
+            title: "حجز آمن",
+            desc: "خطوات واضحة وتجربة مريحة للمريض.",
+          },
+          fastSelection: {
+            title: "اختيار سريع",
+            desc: "اختر التخصص ثم أكمل الحجز بسرعة.",
+          },
+          modernUI: {
+            title: "واجهة حديثة",
+            desc: "ألوان طبية هادئة: أزرق + سماوي.",
+          },
+          errors: {
+            required: "هذا الحقل مطلوب",
+            phoneInvalid: "رقم الهاتف غير صحيح",
+            agreePrivacy: "يجب الموافقة على سياسة الخصوصية",
+            selectSpecialty: "اختر التخصص أولاً",
+            selectTime: "اختر الوقت أولاً",
+          },
+          specialties: {
+            cardio: "القلب",
+            internal: "الباطنة",
+            neuro: "الأعصاب",
+            pediatrics: "الأطفال",
+            orthopedics: "العظام",
+            surgery: "الجراحة العامة",
+            urology: "المسالك البولية",
+            gynecology: "النساء والتوليد",
+            nephrology: "الكلى",
+            vascular: "جراحة الأوعية",
+          },
+        },
         chatbot: {
           title: "مساعد الأعمد الذكي",
           subtitle: "مدعوم بالذكاء الطبي",
@@ -474,10 +781,30 @@ i18n.use(initReactI18next).init({
           greeting:
             "مرحباً! أنا مساعد الأعمد الذكي. كيف يمكنني مساعدتك اليوم؟ يمكنك السؤال عن تخصصاتنا، أطبائنا، أو حجز موعد.",
           quickQuestions: ["احجز موعد", "أطبائنا", "ساعات العمل", "الطوارئ"],
+          error: "حدث خطأ أثناء الاتصال بالخادم.",
         },
         footer: {
           rights: "جميع الحقوق محفوظة.",
           tagline: "نشفي بالتعاطف، والابتكار، والتميز.",
+          copyright: "© 2026 مستشفى الأعمد.",
+          accreditation: "معتمد JCI / ISO 9001",
+          map: {
+            title: "موقعنا على الخريطة",
+            address: "١٢٦ كورنيش النيل، القاهرة",
+            secureAccess: "دخول آمن",
+          },
+          benefits: {
+            title: "مميزات المكان",
+            emergency: {
+              title: "طوارئ 24/7",
+              desc: "خدمة مستمرة على مدار اليوم",
+            },
+            location: {
+              title: "موقع واضح",
+              desc: "سهولة الوصول بالمواصلات",
+            },
+          },
+          quickContact: "تواصل سريع",
         },
       },
     },
@@ -507,7 +834,6 @@ const staggerContainer = {
   },
 };
 
-// scaleIn is used implicitly by consumers referencing this constant
 const scaleIn = {
   hidden: { opacity: 0, scale: 0.9 },
   visible: {
@@ -622,7 +948,7 @@ function Navigation({ lang, toggleLang, isRTL }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = ["home", "specialties", "doctors", "about", "contact"];
+  const navItems = ["home", "specialties", "doctors", "about", "bookSection"];
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -632,10 +958,8 @@ function Navigation({ lang, toggleLang, isRTL }) {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-blue-500/5 border-b border-blue-100/50" : "bg-transparent"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-blue-500/5 border-b border-blue-100/50" : "bg-white"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
@@ -655,7 +979,7 @@ function Navigation({ lang, toggleLang, isRTL }) {
                 Al-Amed
               </span>
               <span className="block text-[10px] text-blue-400 font-medium tracking-[0.2em] uppercase">
-                Hospital
+                {t("nav.hospital")}
               </span>
             </div>
           </motion.div>
@@ -684,16 +1008,17 @@ function Navigation({ lang, toggleLang, isRTL }) {
               className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 rounded-lg hover:bg-blue-50/80 transition-all duration-300"
             >
               <Globe className="w-4 h-4" />
-              <span>{lang === "en" ? "العربية" : "English"}</span>
+              <span>{t("nav.langToggle")}</span>
             </button>
-            <motion.button
+            <motion.a
+              href="#bookSection"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => scrollTo("contact")}
               className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-shadow"
             >
               {t("nav.book")}
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -732,7 +1057,7 @@ function Navigation({ lang, toggleLang, isRTL }) {
                   onClick={toggleLang}
                   className="flex-1 px-4 py-3 text-center text-blue-600 bg-blue-50 rounded-lg font-medium"
                 >
-                  {lang === "en" ? "العربية" : "English"}
+                  {t("nav.langToggle")}
                 </button>
                 <button
                   onClick={() => scrollTo("contact")}
@@ -753,48 +1078,22 @@ function Navigation({ lang, toggleLang, isRTL }) {
    Hero Section
    ═══════════════════════════════════════════════════════════════ */
 function HeroSection({ isRTL }) {
+  const { t } = useTranslation();
+
   return (
     <section
       id="home"
       className="relative min-h-screen overflow-hidden flex items-center pt-24"
     >
-      {/* Background Video */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="w-full h-full object-cover scale-105"
-          poster="/hero-bg.jpg"
-        >
-          <source
-            src="https://res.cloudinary.com/dfhecwiib/video/upload/v1779546084/hero-video_vbhgqb.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div className="absolute inset-0 bg-white/72" />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `
-              radial-gradient(circle at top right, rgba(0,85,255,0.16), transparent 35%),
-              radial-gradient(circle at bottom left, rgba(0,212,255,0.12), transparent 35%),
-              linear-gradient(to bottom, rgba(255,255,255,0.72), rgba(255,255,255,0.94))
-            `,
-          }}
-        />
-        <div
-          className="absolute inset-0 opacity-[0.025]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0,85,255,0.5) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0,85,255,0.5) 1px, transparent 1px)
-            `,
-            backgroundSize: "80px 80px",
-          }}
-        />
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url(https://i.postimg.cc/k40NkMgp/9ef2aa2f-ce0e-423d-9dfb-d086d24b47b4.png)",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       {/* Content */}
@@ -822,7 +1121,7 @@ function HeroSection({ isRTL }) {
             >
               <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
               <span className="text-xs sm:text-sm tracking-[0.18em] uppercase font-bold text-blue-700">
-                Advanced Medical Excellence
+                {t("hero.badge")}
               </span>
             </motion.div>
 
@@ -837,7 +1136,7 @@ function HeroSection({ isRTL }) {
                 color: "#081226",
               }}
             >
-              Exceptional
+              {t("hero.title")}
               <br />
               <span
                 className="italic font-light"
@@ -848,7 +1147,7 @@ function HeroSection({ isRTL }) {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Healthcare Experience
+                {t("hero.titleHighlight")}
               </span>
             </motion.h1>
 
@@ -857,11 +1156,9 @@ function HeroSection({ isRTL }) {
               initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="text-base sm:text-lg lg:text-xl leading-relaxed text-slate-600 max-w-xl mb-10"
+              className="text-base sm:text-lg lg:text-xl leading-relaxed text-slate-200 max-w-xl mb-10"
             >
-              Delivering world-class medical services with advanced technology,
-              compassionate care, and a premium patient experience designed for
-              your comfort and recovery.
+              {t("hero.subtitle")}
             </motion.p>
 
             {/* CTAs */}
@@ -872,7 +1169,7 @@ function HeroSection({ isRTL }) {
               className={`flex flex-wrap gap-4 ${isRTL ? "justify-end" : ""}`}
             >
               <motion.a
-                href="#contact"
+                href="#bookSection"
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl px-7 sm:px-8 py-4 text-sm sm:text-base font-semibold text-white"
@@ -882,7 +1179,7 @@ function HeroSection({ isRTL }) {
                   boxShadow: "0 20px 40px rgba(0,85,255,0.28)",
                 }}
               >
-                <span className="relative z-10">Book An Appointment</span>
+                <span className="relative z-10">{t("hero.ctaPrimary")}</span>
                 <ArrowRight
                   size={18}
                   className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
@@ -906,74 +1203,82 @@ function HeroSection({ isRTL }) {
                   boxShadow: "0 10px 30px rgba(0,0,0,0.04)",
                 }}
               >
-                Explore Services
+                {t("hero.ctaSecondary")}
                 <ChevronDown size={18} />
               </motion.a>
-            </motion.div>
-
-            {/* Trust Row */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.85 }}
-              className={`mt-10 flex flex-wrap items-center gap-6 text-sm text-slate-500 ${isRTL ? "justify-end" : ""}`}
-            >
-              <div className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-emerald-500" />
-                <span>JCI Accredited</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck size={16} className="text-blue-500" />
-                <span>International Standards</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock3 size={16} className="text-cyan-500" />
-                <span>24/7 Emergency Care</span>
-              </div>
             </motion.div>
           </motion.div>
 
           {/* Right — Medical Monitor Card */}
           <motion.div
-            initial={{ opacity: 0, x: 50, scale: 0.96 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            initial={{
+              opacity: 0,
+              x: isRTL ? -50 : 50,
+              scale: 0.96,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className={`relative hidden lg:block ${isRTL ? "lg:order-1" : ""}`}
+            style={{
+              willChange: "transform, opacity",
+              transform: "translate3d(0,0,0)",
+              backfaceVisibility: "hidden",
+            }}
           >
             <div
               className="relative overflow-hidden rounded-[38px] p-8"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(255,255,255,0.82), rgba(248,252,255,0.72))",
-                backdropFilter: "blur(30px)",
+                backdropFilter: "blur(16px)",
                 border: "1px solid rgba(255,255,255,0.9)",
                 boxShadow:
                   "0 40px 120px rgba(37,99,235,0.12), inset 0 1px 0 rgba(255,255,255,0.9)",
+                transform: "translate3d(0,0,0)",
+                willChange: "transform",
+                isolation: "isolate",
               }}
             >
               {/* Background Glows */}
               <motion.div
-                className="absolute -top-32 -right-24 w-[420px] h-[420px] rounded-full blur-3xl"
+                className="absolute -top-32 -right-24 w-[420px] h-[420px] rounded-full blur-2xl"
                 style={{
                   background:
                     "radial-gradient(circle, rgba(37,99,235,0.22), rgba(56,189,248,0.06), transparent 70%)",
+                  willChange: "transform",
+                  transform: "translate3d(0,0,0)",
                 }}
-                animate={{ scale: [1, 1.12, 1], rotate: [0, 10, 0] }}
+                animate={{
+                  scale: [1, 1.08, 1],
+                  rotate: [0, 6, 0],
+                }}
                 transition={{
-                  duration: 12,
+                  duration: 14,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
               />
+
               <motion.div
-                className="absolute -bottom-32 -left-24 w-[320px] h-[320px] rounded-full blur-3xl"
+                className="absolute -bottom-32 -left-24 w-[320px] h-[320px] rounded-full blur-2xl"
                 style={{
                   background:
                     "radial-gradient(circle, rgba(34,211,238,0.16), transparent 70%)",
+                  willChange: "transform",
+                  transform: "translate3d(0,0,0)",
                 }}
-                animate={{ scale: [1, 1.15, 1] }}
+                animate={{
+                  scale: [1, 1.1, 1],
+                }}
                 transition={{
-                  duration: 10,
+                  duration: 12,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
@@ -984,56 +1289,84 @@ function HeroSection({ isRTL }) {
                 <div>
                   <div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-4 border border-sky-100 bg-white/70">
                     <motion.span
-                      animate={{ scale: [1, 1.5, 1], opacity: [0.6, 1, 0.6] }}
-                      transition={{ duration: 1.2, repeat: Infinity }}
+                      animate={{
+                        scale: [1, 1.35, 1],
+                        opacity: [0.6, 1, 0.6],
+                      }}
+                      transition={{
+                        duration: 1.4,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
                       className="w-2.5 h-2.5 rounded-full bg-emerald-500"
                     />
                     <span className="text-[11px] tracking-[0.18em] uppercase font-bold text-sky-700">
-                      Live Medical Monitoring
+                      {t("hero.card.liveMonitoring")}
                     </span>
                   </div>
+
                   <h3 className="text-[30px] leading-tight font-bold text-slate-900">
-                    AI Smart Healthcare System
+                    {t("hero.card.title")}
                   </h3>
+
                   <p className="text-slate-500 mt-3 text-[15px] leading-7 max-w-[480px]">
-                    Advanced real-time monitoring platform designed for premium
-                    medical experiences and modern patient care.
+                    {t("hero.card.subtitle")}
                   </p>
                 </div>
 
                 {/* Heart Core */}
                 <motion.div
-                  animate={{ scale: [1, 1.12, 1] }}
+                  animate={{
+                    y: [0, -8, 0],
+                    scale: [1, 1.06, 1],
+                  }}
                   transition={{
-                    duration: 1.1,
+                    duration: 1.15,
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
                   className="relative"
+                  style={{
+                    willChange: "transform",
+                    transform: "translate3d(0,0,0)",
+                  }}
                 >
                   <motion.div
-                    animate={{ scale: [1, 1.9], opacity: [0.45, 0] }}
+                    animate={{
+                      scale: [1, 1.65],
+                      opacity: [0.38, 0],
+                    }}
                     transition={{
                       duration: 1.8,
                       repeat: Infinity,
                       ease: "easeOut",
                     }}
-                    className="absolute inset-0 rounded-3xl bg-sky-400 blur-md"
+                    className="absolute inset-0 rounded-3xl bg-sky-400 blur-sm"
                   />
+
                   <div
                     className="relative w-[72px] h-[72px] rounded-[24px] flex items-center justify-center"
                     style={{
                       background:
                         "linear-gradient(135deg, #2563eb 0%, #38bdf8 100%)",
                       boxShadow: "0 20px 45px rgba(37,99,235,0.30)",
+                      transform: "translate3d(0,0,0)",
                     }}
                   >
                     <motion.div
-                      animate={{ scaleY: [1, 0.82, 1], scaleX: [1, 1.08, 1] }}
+                      animate={{
+                        y: [0, -4, 0],
+                        scaleY: [1, 0.9, 1],
+                        scaleX: [1, 1.05, 1],
+                      }}
                       transition={{
-                        duration: 0.9,
+                        duration: 0.95,
                         repeat: Infinity,
                         ease: "easeInOut",
+                      }}
+                      style={{
+                        willChange: "transform",
+                        transform: "translate3d(0,0,0)",
                       }}
                     >
                       <HeartPulse className="text-white" size={30} />
@@ -1048,6 +1381,7 @@ function HeroSection({ isRTL }) {
                 style={{
                   background:
                     "linear-gradient(180deg, rgba(37,99,235,0.04), rgba(56,189,248,0.03))",
+                  transform: "translate3d(0,0,0)",
                 }}
               >
                 {/* Grid */}
@@ -1055,32 +1389,56 @@ function HeroSection({ isRTL }) {
                   className="absolute inset-0 opacity-[0.08]"
                   style={{
                     backgroundImage: `
-                      linear-gradient(to right, #38bdf8 1px, transparent 1px),
-                      linear-gradient(to bottom, #38bdf8 1px, transparent 1px)
-                    `,
+            linear-gradient(to right, #38bdf8 1px, transparent 1px),
+            linear-gradient(to bottom, #38bdf8 1px, transparent 1px)
+          `,
                     backgroundSize: "32px 32px",
                   }}
                 />
+
                 {/* Light Sweep */}
                 <motion.div
-                  animate={{ x: ["-120%", "220%"] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-y-0 w-[35%] blur-3xl"
+                  animate={{
+                    x: isRTL ? ["120%", "-220%"] : ["-120%", "220%"],
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                  className="absolute inset-y-0 w-[35%] blur-2xl"
                   style={{
                     background:
-                      "linear-gradient(90deg, transparent, rgba(56,189,248,0.22), transparent)",
+                      "linear-gradient(90deg, transparent, rgba(56,189,248,0.18), transparent)",
+                    willChange: "transform",
+                    transform: "translate3d(0,0,0)",
                   }}
                 />
+
                 {/* ECG Line */}
                 <motion.div
                   className="absolute inset-0 w-[200%]"
-                  animate={{ x: ["0%", "-50%"] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                  animate={{
+                    x: isRTL ? ["-50%", "0%"] : ["0%", "-50%"],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                  style={{
+                    willChange: "transform",
+                    transform: "translate3d(0,0,0)",
+                  }}
                 >
                   <svg
                     viewBox="0 0 1200 130"
                     className="w-full h-full"
                     preserveAspectRatio="none"
+                    style={{
+                      willChange: "transform",
+                      transform: "translate3d(0,0,0)",
+                    }}
                   >
                     <defs>
                       <linearGradient id="line" x1="0" y1="0" x2="1200" y2="0">
@@ -1089,13 +1447,14 @@ function HeroSection({ isRTL }) {
                         <stop offset="100%" stopColor="#22d3ee" />
                       </linearGradient>
                     </defs>
+
                     <path
                       d="
-                        M0 65 L120 65 L145 65 L170 45 L190 90 L220 18 L250 65 L390 65
-                        L430 65 L455 48 L480 82 L510 28 L540 65 L600 65
-                        M600 65 L720 65 L745 65 L770 45 L790 90 L820 18 L850 65 L990 65
-                        L1030 65 L1055 48 L1080 82 L1110 28 L1140 65 L1200 65
-                      "
+              M0 65 L120 65 L145 65 L170 45 L190 90 L220 18 L250 65 L390 65
+              L430 65 L455 48 L480 82 L510 28 L540 65 L600 65
+              M600 65 L720 65 L745 65 L770 45 L790 90 L820 18 L850 65 L990 65
+              L1030 65 L1055 48 L1080 82 L1110 28 L1140 65 L1200 65
+            "
                       fill="none"
                       stroke="url(#line)"
                       strokeWidth="4"
@@ -1108,11 +1467,15 @@ function HeroSection({ isRTL }) {
 
               {/* Bottom Info */}
               <motion.div
-                whileHover={{ scale: 1.01 }}
+                whileHover={{
+                  scale: 1.01,
+                }}
                 className="mt-7 rounded-[24px] p-5 flex items-center gap-4"
                 style={{
                   background: "rgba(255,255,255,0.72)",
                   border: "1px solid rgba(37,99,235,0.08)",
+                  willChange: "transform",
+                  transform: "translate3d(0,0,0)",
                 }}
               >
                 <div
@@ -1123,31 +1486,35 @@ function HeroSection({ isRTL }) {
                 >
                   <CheckCircle size={22} color="#fff" />
                 </div>
+
                 <div>
                   <div className="font-semibold text-slate-900 text-[15px]">
-                    International Medical Accreditation
+                    {t("hero.card.accreditationTitle")}
                   </div>
                   <div className="text-sm text-slate-500 mt-1 leading-6">
-                    Globally trusted healthcare standards with premium patient
-                    safety.
+                    {t("hero.card.accreditationDesc")}
                   </div>
                 </div>
               </motion.div>
 
               {/* Floating Badge */}
               <motion.div
-                animate={{ y: [0, -8, 0] }}
+                animate={{
+                  y: [0, -8, 0],
+                }}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute top-6 right-6 px-5 py-3 rounded-full text-white text-xs font-bold shadow-2xl"
+                className={`absolute top-6 ${isRTL ? "left-6" : "right-6"} px-5 py-3 rounded-full text-white text-xs font-bold shadow-2xl`}
                 style={{
                   background: "linear-gradient(135deg, #2563eb, #38bdf8)",
+                  willChange: "transform",
+                  transform: "translate3d(0,0,0)",
                 }}
               >
-                #1 Smart Medical Center
+                {t("hero.card.floatingBadge")}
               </motion.div>
             </div>
           </motion.div>
@@ -1161,7 +1528,7 @@ function HeroSection({ isRTL }) {
         className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 z-20"
       >
         <span className="text-[11px] uppercase tracking-[0.3em] text-slate-400 font-semibold">
-          Scroll
+          {t("hero.scroll")}
         </span>
         <ChevronDown size={16} className="text-slate-400" />
       </motion.div>
@@ -1170,169 +1537,17 @@ function HeroSection({ isRTL }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Stats Section
-   ═══════════════════════════════════════════════════════════════ */
-function Counter({ from, to, isInView, suffix }) {
-  const nodeRef = useRef();
-  const motionVal = useMotionValue(from);
-  const springVal = useSpring(motionVal, { duration: 2500, bounce: 0 });
-
-  useEffect(() => {
-    if (isInView) motionVal.set(to);
-  }, [isInView, to, motionVal]);
-
-  useEffect(() => {
-    const unsubscribe = springVal.on("change", (v) => {
-      if (nodeRef.current)
-        nodeRef.current.textContent = Math.floor(v).toLocaleString() + suffix;
-    });
-    return unsubscribe;
-  }, [springVal, suffix]);
-
-  return (
-    <span ref={nodeRef}>
-      {from.toLocaleString()}
-      {suffix}
-    </span>
-  );
-}
-
-function StatsSection({ isRTL }) {
-  const { t } = useTranslation();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const stats = [
-    { value: 50000, suffix: "+", label: t("hero.stats.patients"), icon: Users },
-    {
-      value: 120,
-      suffix: "+",
-      label: t("hero.stats.doctors"),
-      icon: Stethoscope,
-    },
-    { value: 25, suffix: "+", label: t("hero.stats.years"), icon: Award },
-    { value: 35, suffix: "+", label: t("hero.stats.awards"), icon: Star },
-  ];
-
-  return (
-    <section className="relative py-20 bg-gradient-to-b from-white to-blue-50/30">
-      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          className={`grid grid-cols-2 lg:grid-cols-4 gap-6 ${isRTL ? "text-right" : "text-left"}`}
-        >
-          {stats.map((stat, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{
-                duration: 0.6,
-                delay: i * 0.15,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              whileHover={{
-                y: -8,
-                boxShadow: "0 25px 50px rgba(0,85,255,0.1)",
-              }}
-              className="relative bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg shadow-blue-500/5 border border-blue-100/60"
-            >
-              <div
-                className={`flex items-center gap-3 mb-3 ${isRTL ? "flex-row-reverse" : ""}`}
-              >
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
-                  <stat.icon className="w-5 h-5 text-white" />
-                </div>
-              </div>
-              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent mb-1">
-                <Counter
-                  from={0}
-                  to={stat.value}
-                  isInView={isInView}
-                  suffix={stat.suffix}
-                />
-              </div>
-              <div className="text-sm text-slate-500 font-medium">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ═══════════════════════════════════════════════════════════════
    Specialties Section
+   — All text sourced from i18n; images kept as non-translatable data
    ═══════════════════════════════════════════════════════════════ */
 
-// Module-level translations for SpecialtiesSection and BookingSection
-// (kept separate from i18n useTranslation to preserve original behavior)
-const specialtiesSectionTranslations = {
-  en: {
-    badge: "Advanced Medical Systems",
-    heading: "Our Specialties",
-    sub: "Next-generation medical intelligence powered by artificial intelligence, cinematic diagnostics, and futuristic healthcare systems.",
-    cta: "Explore specialty",
-    cards: [
-      {
-        id: "01",
-        title: "Oncology Intelligence",
-        desc: "AI-powered early detection and precise microscopic analysis for oncology diagnostics.",
-        stats: ["98.7% Accuracy", "AI Enhanced", "Live Analysis"],
-        image: "https://i.postimg.cc/ydt1J7sq/specialty-internal.jpg",
-      },
-      {
-        id: "02",
-        title: "Neural Mapping",
-        desc: "Advanced brain topology visualization and neurological diagnostic systems.",
-        stats: ["3D Mapping", "Neural Scan", "Smart Detection"],
-        image: "https://i.postimg.cc/FHphyyNC/specialty-neurology.jpg",
-      },
-      {
-        id: "03",
-        title: "Cardiac Analysis",
-        desc: "Real-time cardiac imaging with AI anomaly detection and predictive monitoring.",
-        stats: ["Heart Monitor", "AI Prediction", "Realtime ECG"],
-        image: "https://i.postimg.cc/KzzSrwJD/specialty-cardiology.jpg",
-      },
-    ],
-  },
-  ar: {
-    badge: "أنظمة طبية متقدمة",
-    heading: "تخصصاتنا",
-    sub: "ذكاء طبي من الجيل القادم مدعوم بالذكاء الاصطناعي وأنظمة التشخيص السينمائية والرعاية الصحية المستقبلية.",
-    cta: "استكشف التخصص",
-    cards: [
-      {
-        id: "01",
-        title: "ذكاء علم الأورام",
-        desc: "كشف مبكر مدعوم بالذكاء الاصطناعي وتحليل مجهري دقيق لتشخيصات الأورام.",
-        stats: ["دقة 98.7%", "AI معزّز", "تحليل مباشر"],
-        image:
-          "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=900&q=80",
-      },
-      {
-        id: "02",
-        title: "رسم الخرائط العصبية",
-        desc: "تصوير متقدم لطبولوجيا الدماغ وأنظمة التشخيص العصبي.",
-        stats: ["خرائط ثلاثية الأبعاد", "مسح عصبي", "كشف ذكي"],
-        image:
-          "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=900&q=80",
-      },
-      {
-        id: "03",
-        title: "تحليل القلب",
-        desc: "تصوير قلبي في الوقت الفعلي مع كشف الشذوذات بالذكاء الاصطناعي والمراقبة التنبؤية.",
-        stats: ["مراقبة القلب", "توقعات AI", "رسم قلب فوري"],
-        image:
-          "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=900&q=80",
-      },
-    ],
-  },
+// Non-translatable data: images and icon map
+const SPECIALTY_CARD_IMAGES = {
+  "01": "https://i.postimg.cc/ydt1J7sq/specialty-internal.jpg",
+  "02": "https://i.postimg.cc/FHphyyNC/specialty-neurology.jpg",
+  "03": "https://i.postimg.cc/KzzSrwJD/specialty-cardiology.jpg",
 };
 
-// Icon map for specialty cards
 const SPECIALTY_ICONS = { "01": Microscope, "02": Brain, "03": Activity };
 
 function useReveal(threshold = 0.12) {
@@ -1361,6 +1576,7 @@ function useReveal(threshold = 0.12) {
 function SpecialtyCard({ card, index, cta, isRTL }) {
   const [ref, visible] = useReveal(0.08);
   const Icon = SPECIALTY_ICONS[card.id];
+  const image = SPECIALTY_CARD_IMAGES[card.id];
   const flipImage = index % 2 === 1;
 
   return (
@@ -1385,7 +1601,7 @@ function SpecialtyCard({ card, index, cta, isRTL }) {
           .join(" ")}
       >
         <img
-          src={card.image}
+          src={image}
           alt={card.title}
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
@@ -1465,11 +1681,16 @@ function SpecialtyCard({ card, index, cta, isRTL }) {
   );
 }
 
-export function SpecialtiesSection({ locale = "en" }) {
-  const tr =
-    specialtiesSectionTranslations[locale] ?? specialtiesSectionTranslations.en;
-  const isRTL = locale === "ar";
+export function SpecialtiesSection() {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
   const [headerRef, headerVisible] = useReveal(0.2);
+
+  const cards = t("specialties.advanced.cards", { returnObjects: true });
+  const badge = t("specialties.advanced.badge");
+  const heading = t("specialties.advanced.heading");
+  const sub = t("specialties.advanced.sub");
+  const cta = t("specialties.advanced.cta");
 
   return (
     <section
@@ -1505,7 +1726,7 @@ export function SpecialtiesSection({ locale = "en" }) {
           >
             <div className="w-5 h-px bg-cyan-400 flex-shrink-0" aria-hidden />
             <span className="text-[0.7rem] tracking-[0.22em] uppercase text-gray-400 font-medium">
-              {tr.badge}
+              {badge}
             </span>
           </div>
 
@@ -1516,7 +1737,7 @@ export function SpecialtiesSection({ locale = "en" }) {
               "mb-7",
             ].join(" ")}
           >
-            {tr.heading}
+            {heading}
           </h2>
 
           <div className="w-full h-px bg-gray-100 mb-7" aria-hidden />
@@ -1528,21 +1749,22 @@ export function SpecialtiesSection({ locale = "en" }) {
               isRTL ? "mr-0" : "",
             ].join(" ")}
           >
-            {tr.sub}
+            {sub}
           </p>
         </header>
 
         {/* Cards */}
         <div className="flex flex-col gap-5 lg:gap-6">
-          {tr.cards.map((card, i) => (
-            <SpecialtyCard
-              key={card.id}
-              card={card}
-              index={i}
-              cta={tr.cta}
-              isRTL={isRTL}
-            />
-          ))}
+          {Array.isArray(cards) &&
+            cards.map((card, i) => (
+              <SpecialtyCard
+                key={card.id}
+                card={card}
+                index={i}
+                cta={cta}
+                isRTL={isRTL}
+              />
+            ))}
         </div>
 
         {/* Footer Rule */}
@@ -1615,7 +1837,7 @@ function WhyUsSection({ isRTL }) {
                 className={`absolute -bottom-4 sm:-bottom-8 ${isRTL ? "-right-4 sm:-right-8" : "-left-4 sm:-left-8"} z-20 w-32 h-32 sm:w-56 sm:h-40 rounded-2xl overflow-hidden border-[6px] border-white shadow-xl shadow-slate-200/50`}
               >
                 <img
-                  src="/hero-bg.jpg"
+                  src="https://res.cloudinary.com/dfhecwiib/image/upload/v1779548424/hero-bg_govcjd.jpg"
                   alt="Hospital facility"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                 />
@@ -1633,7 +1855,7 @@ function WhyUsSection({ isRTL }) {
               >
                 <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
                 <span className="text-xs font-bold text-slate-700 tracking-wider">
-                  JCI ACCREDITED
+                  {t("whyUs.jciAccredited")}
                 </span>
               </motion.div>
             </div>
@@ -1787,8 +2009,49 @@ function DoctorsSection({ isRTL }) {
 
 /* ═══════════════════════════════════════════════════════════════
    Testimonials Section
+   — Only non-translatable data (avatar, rating) kept in JS array
    ═══════════════════════════════════════════════════════════════ */
-function TestimonialsSection() {
+
+// Non-translatable testimonial data
+const TESTIMONIALS_STATIC = [
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
+    rating: "5.0",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop",
+    rating: "4.9",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1504257432389-52343af06ae3?q=80&w=800&auto=format&fit=crop",
+    rating: "5.0",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=800&auto=format&fit=crop",
+    rating: "4.8",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?q=80&w=800&auto=format&fit=crop",
+    rating: "5.0",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=800&auto=format&fit=crop",
+    rating: "4.9",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+    rating: "5.0",
+  },
+];
+
+function TestimonialsSection({ isRtl }) {
   const { t, i18n } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
@@ -1799,6 +2062,11 @@ function TestimonialsSection() {
   const trackRef = useRef(null);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+
+  const rtl =
+    typeof isRtl === "boolean" ? isRtl : (
+      i18n.language === "ar" || i18n.dir?.() === "rtl"
+    );
 
   useEffect(() => {
     const handleResize = () => {
@@ -1918,19 +2186,19 @@ function TestimonialsSection() {
       : {}),
       avatar: item.avatar,
       rating: item.rating,
-      role: i18n.language === "ar" ? item.roleAr : item.roleEn,
-      title: i18n.language === "ar" ? item.titleAr : item.titleEn,
-      review: i18n.language === "ar" ? item.reviewAr : item.reviewEn,
+      role: rtl ? item.roleAr : item.roleEn,
+      title: rtl ? item.titleAr : item.titleEn,
+      review: rtl ? item.reviewAr : item.reviewEn,
       name:
         (
           Array.isArray(translatedTestimonials) &&
           translatedTestimonials[index]?.name
         ) ?
           translatedTestimonials[index].name
-        : i18n.language === "ar" ? "مريض"
+        : rtl ? "مريض"
         : "Patient",
     }));
-  }, [translatedTestimonials, i18n.language]);
+  }, [translatedTestimonials, rtl]);
 
   const maxStartIndex = Math.max(0, TESTIMONIALS.length - visibleCards);
 
@@ -1943,7 +2211,6 @@ function TestimonialsSection() {
 
     measureCardStep();
     window.addEventListener("resize", measureCardStep);
-
     return () => window.removeEventListener("resize", measureCardStep);
   }, [visibleCards, TESTIMONIALS.length]);
 
@@ -2006,6 +2273,7 @@ function TestimonialsSection() {
   return (
     <section
       id="testimonials"
+      dir={rtl ? "rtl" : "ltr"}
       className="relative overflow-hidden bg-light-blue-bg py-[90px] lg:py-[130px]"
     >
       <div className="absolute top-0 left-0 w-[320px] h-[320px] bg-hospital-blue/10 blur-[120px] rounded-full" />
@@ -2044,11 +2312,10 @@ function TestimonialsSection() {
           <div className="overflow-hidden">
             <div
               ref={trackRef}
-              className="flex"
+              className={`flex ${rtl ? "flex-row-reverse" : "flex-row"}`}
               style={{
                 transform: `translateX(-${currentIndex * cardStep}px)`,
                 transition: "transform 700ms cubic-bezier(0.22, 1, 0.36, 1)",
-                willChange: "transform",
               }}
             >
               {TESTIMONIALS.map((item, index) => (
@@ -2236,123 +2503,12 @@ function FAQSection({ isRTL }) {
 
 /* ═══════════════════════════════════════════════════════════════
    Booking Section
+   — All text sourced from unified i18n; no local translation object
    ═══════════════════════════════════════════════════════════════ */
 export function BookingSection({ isRtl = true }) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const locale = i18n.language === "ar" ? "ar" : "en";
-  // Local translations scoped to this component
-  const t = {
-    ar: {
-      eyebrow: "حجز موعد",
-      title: "احجز موعدك في دقائق",
-      subtitle:
-        "اختر التخصص، ثم أي طبيب متاح، وبعدها الوقت المناسب، وأكمل بياناتك بسهولة.",
-      panelTitle: "رعاية طبية تبدأ بحجز سهل",
-      panelSubtitle:
-        "واجهة حجز واضحة، سريعة، ومريحة تناسب مواقع المستشفيات الحديثة.",
-      step1: "التخصص",
-      step2: "الطبيب",
-      step3: "الوقت",
-      step4: "البيانات",
-      selectSpecialty: "اختر التخصص",
-      selectDoctor: "اختر الطبيب",
-      selectTime: "اختر الموعد",
-      completeDetails: "أكمل البيانات",
-      anyDoctor: "أي طبيب متاح",
-      next: "التالي",
-      back: "رجوع",
-      submit: "تأكيد الحجز",
-      successTitle: "تم تأكيد الحجز بنجاح",
-      successDesc: "سيتم التواصل معك قريبًا لتأكيد الموعد.",
-      newBooking: "حجز جديد",
-      fullName: "الاسم الكامل",
-      phone: "رقم الهاتف",
-      email: "البريد الإلكتروني",
-      gender: "النوع",
-      male: "ذكر",
-      female: "أنثى",
-      dob: "تاريخ الميلاد",
-      notes: "ملاحظات",
-      notesPlaceholder: "اكتب أي ملاحظات إضافية...",
-      privacyAgree: "أوافق على سياسة الخصوصية",
-      errors: {
-        required: "هذا الحقل مطلوب",
-        phoneInvalid: "رقم الهاتف غير صحيح",
-        agreePrivacy: "يجب الموافقة على سياسة الخصوصية",
-        selectSpecialty: "اختر التخصص أولاً",
-        selectTime: "اختر الوقت أولاً",
-      },
-      specialties: {
-        cardio: "القلب",
-        internal: "الباطنة",
-        neuro: "الأعصاب",
-        pediatrics: "الأطفال",
-        orthopedics: "العظام",
-        surgery: "الجراحة العامة",
-        urology: "المسالك البولية",
-        gynecology: "النساء والتوليد",
-        nephrology: "الكلى",
-        vascular: "جراحة الأوعية",
-      },
-      selected: "تم الاختيار",
-    },
-    en: {
-      eyebrow: "Appointment Booking",
-      title: "Book Your Appointment in Minutes",
-      subtitle:
-        "Choose the specialty, then any available doctor, then the right time, and complete your details easily.",
-      panelTitle: "Medical care starts with easy booking",
-      panelSubtitle:
-        "A clean, fast, and friendly booking interface for modern hospital websites.",
-      step1: "Specialty",
-      step2: "Doctor",
-      step3: "Time",
-      step4: "Details",
-      selectSpecialty: "Select Specialty",
-      selectDoctor: "Select Doctor",
-      selectTime: "Select Time",
-      completeDetails: "Complete Details",
-      anyDoctor: "Any Available Doctor",
-      next: "Next",
-      back: "Back",
-      submit: "Confirm Booking",
-      successTitle: "Booking confirmed successfully",
-      successDesc: "We will contact you soon to confirm your appointment.",
-      newBooking: "New Booking",
-      fullName: "Full Name",
-      phone: "Phone Number",
-      email: "Email",
-      gender: "Gender",
-      male: "Male",
-      female: "Female",
-      dob: "Date of Birth",
-      notes: "Notes",
-      notesPlaceholder: "Write any additional notes...",
-      privacyAgree: "I agree to the privacy policy",
-      errors: {
-        required: "This field is required",
-        phoneInvalid: "Invalid phone number",
-        agreePrivacy: "You must agree to the privacy policy",
-        selectSpecialty: "Please select a specialty first",
-        selectTime: "Please select a time first",
-      },
-      specialties: {
-        cardio: "Cardiology",
-        internal: "Internal Medicine",
-        neuro: "Neurology",
-        pediatrics: "Pediatrics",
-        orthopedics: "Orthopedics",
-        surgery: "General Surgery",
-        urology: "Urology",
-        gynecology: "Obstetrics & Gynecology",
-        nephrology: "Nephrology",
-        vascular: "Vascular Surgery",
-      },
-      selected: "Selected",
-    },
-  }[locale];
-
+  // Non-translatable booking data
   const specialties = useMemo(
     () => [
       { id: "cardio", icon: "❤️" },
@@ -2387,7 +2543,12 @@ export function BookingSection({ isRtl = true }) {
     [],
   );
 
-  const steps = [t.step1, t.step2, t.step3, t.step4];
+  const steps = [
+    t("booking.step1"),
+    t("booking.step2"),
+    t("booking.step3"),
+    t("booking.step4"),
+  ];
 
   const [step, setStep] = useState(1);
   const [success, setSuccess] = useState(false);
@@ -2420,17 +2581,19 @@ export function BookingSection({ isRtl = true }) {
   const validateStep = () => {
     const nextErrors = {};
     if (step === 1 && !form.specialty)
-      nextErrors.specialty = t.errors.selectSpecialty;
+      nextErrors.specialty = t("booking.errors.selectSpecialty");
     if (step === 3) {
-      if (!form.date) nextErrors.date = t.errors.required;
-      if (!form.time) nextErrors.time = t.errors.selectTime;
+      if (!form.date) nextErrors.date = t("booking.errors.required");
+      if (!form.time) nextErrors.time = t("booking.errors.selectTime");
     }
     if (step === 4) {
-      if (!form.fullName.trim()) nextErrors.fullName = t.errors.required;
-      if (!form.phone.trim()) nextErrors.phone = t.errors.required;
+      if (!form.fullName.trim())
+        nextErrors.fullName = t("booking.errors.required");
+      if (!form.phone.trim()) nextErrors.phone = t("booking.errors.required");
       else if (!/^\+?[0-9]{8,15}$/.test(form.phone.replace(/\s+/g, "")))
-        nextErrors.phone = t.errors.phoneInvalid;
-      if (!form.agreePrivacy) nextErrors.agreePrivacy = t.errors.agreePrivacy;
+        nextErrors.phone = t("booking.errors.phoneInvalid");
+      if (!form.agreePrivacy)
+        nextErrors.agreePrivacy = t("booking.errors.agreePrivacy");
     }
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
@@ -2453,12 +2616,15 @@ export function BookingSection({ isRtl = true }) {
     hidden: { opacity: 0, y: 16 },
     show: { opacity: 1, y: 0 },
   };
+
   const activeSpecialtyLabel =
-    t.specialties[form.specialty] ||
-    (locale === "ar" ? "غير محدد" : "Not selected");
+    form.specialty ?
+      t(`booking.specialties.${form.specialty}`)
+    : t("booking.notSelected");
 
   return (
     <section
+      id="bookSection"
       dir={isRtl ? "rtl" : "ltr"}
       className="bg-[#edf7fb] px-4 py-8 md:px-6 md:py-10"
     >
@@ -2494,10 +2660,10 @@ export function BookingSection({ isRtl = true }) {
               </div>
 
               <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-                {t.panelTitle}
+                {t("booking.panelTitle")}
               </h2>
               <p className="mt-5 max-w-md text-lg leading-8 text-white/82">
-                {t.panelSubtitle}
+                {t("booking.panelSubtitle")}
               </p>
 
               <div className="mt-10 space-y-4">
@@ -2505,12 +2671,10 @@ export function BookingSection({ isRtl = true }) {
                   <ShieldCheck className="mt-1 h-5 w-5 shrink-0" />
                   <div>
                     <h4 className="font-semibold">
-                      {locale === "ar" ? "حجز آمن" : "Safe Booking"}
+                      {t("booking.safeBooking.title")}
                     </h4>
                     <p className="mt-1 text-sm text-white/76">
-                      {locale === "ar" ?
-                        "خطوات واضحة وتجربة مريحة للمريض."
-                      : "Clear steps and a comfortable patient experience."}
+                      {t("booking.safeBooking.desc")}
                     </p>
                   </div>
                 </div>
@@ -2518,12 +2682,10 @@ export function BookingSection({ isRtl = true }) {
                   <Stethoscope className="mt-1 h-5 w-5 shrink-0" />
                   <div>
                     <h4 className="font-semibold">
-                      {locale === "ar" ? "اختيار سريع" : "Fast Selection"}
+                      {t("booking.fastSelection.title")}
                     </h4>
                     <p className="mt-1 text-sm text-white/76">
-                      {locale === "ar" ?
-                        "اختر التخصص ثم أكمل الحجز بسرعة."
-                      : "Choose the specialty and finish quickly."}
+                      {t("booking.fastSelection.desc")}
                     </p>
                   </div>
                 </div>
@@ -2531,12 +2693,10 @@ export function BookingSection({ isRtl = true }) {
                   <Sparkles className="mt-1 h-5 w-5 shrink-0" />
                   <div>
                     <h4 className="font-semibold">
-                      {locale === "ar" ? "واجهة حديثة" : "Modern UI"}
+                      {t("booking.modernUI.title")}
                     </h4>
                     <p className="mt-1 text-sm text-white/76">
-                      {locale === "ar" ?
-                        "ألوان طبية هادئة: أزرق + سماوي."
-                      : "Calm medical colors: blue + cyan."}
+                      {t("booking.modernUI.desc")}
                     </p>
                   </div>
                 </div>
@@ -2551,11 +2711,11 @@ export function BookingSection({ isRtl = true }) {
               </div>
               <div className={isRtl ? "text-right" : "text-left"}>
                 <p className="text-sm">
-                  {locale === "ar" ?
-                    "واجهة حجز المرضى"
-                  : "Patient Booking Interface"}
+                  {t("booking.patientBookingInterface")}
                 </p>
-                <p className="text-xs text-white/70">Medical Appointment UI</p>
+                <p className="text-xs text-white/70">
+                  {t("booking.medicalAppointmentUI")}
+                </p>
               </div>
             </div>
           </aside>
@@ -2572,13 +2732,13 @@ export function BookingSection({ isRtl = true }) {
                   className={`mb-10 ${isRtl ? "text-right" : "text-left"}`}
                 >
                   <p className="mb-2 text-sm font-semibold tracking-[0.2em] text-[#1b9dc4] uppercase">
-                    {t.eyebrow}
+                    {t("booking.eyebrow")}
                   </p>
                   <h1 className="text-3xl font-bold text-[#132235] md:text-5xl">
-                    {t.title}
+                    {t("booking.title")}
                   </h1>
                   <p className="mt-3 max-w-2xl text-base leading-7 text-[#617183] md:text-lg">
-                    {t.subtitle}
+                    {t("booking.subtitle")}
                   </p>
                 </motion.div>
 
@@ -2639,7 +2799,7 @@ export function BookingSection({ isRtl = true }) {
                             <Sparkles className="h-5 w-5" />
                           </div>
                           <h3 className="text-2xl font-bold text-[#132235]">
-                            {t.selectSpecialty}
+                            {t("booking.selectSpecialty")}
                           </h3>
                         </div>
                         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
@@ -2672,11 +2832,11 @@ export function BookingSection({ isRtl = true }) {
                                       )
                                     }`}
                                   >
-                                    {t.specialties[spec.id]}
+                                    {t(`booking.specialties.${spec.id}`)}
                                   </div>
                                   {active && (
                                     <div className="mt-1 text-xs font-medium text-[#1b9dc4]">
-                                      {t.selected}
+                                      {t("booking.selected")}
                                     </div>
                                   )}
                                 </div>
@@ -2699,7 +2859,7 @@ export function BookingSection({ isRtl = true }) {
                             <User className="h-5 w-5" />
                           </div>
                           <h3 className="text-2xl font-bold text-[#132235]">
-                            {t.selectDoctor}
+                            {t("booking.selectDoctor")}
                           </h3>
                         </div>
                         <div className="rounded-[24px] border border-[#d9e5ee] bg-gradient-to-br from-white to-[#f6fbfe] p-5 md:p-6">
@@ -2716,18 +2876,15 @@ export function BookingSection({ isRtl = true }) {
                             </div>
                             <div className="min-w-0 flex-1">
                               <div className="text-lg font-semibold text-[#132235]">
-                                {t.anyDoctor}
+                                {t("booking.anyDoctor")}
                               </div>
                               <div className="mt-1 text-sm text-[#617183]">
-                                {locale === "ar" ?
-                                  "سيتم توجيه الحجز إلى أول طبيب متاح."
-                                : "The booking will go to the first available doctor."
-                                }
+                                {t("booking.anyDoctorDesc")}
                               </div>
                             </div>
                             {form.doctor === "any" && (
                               <div className="rounded-full bg-[#1b9dc4]/10 px-3 py-1 text-xs font-semibold text-[#1b9dc4]">
-                                {t.selected}
+                                {t("booking.selected")}
                               </div>
                             )}
                           </button>
@@ -2742,15 +2899,13 @@ export function BookingSection({ isRtl = true }) {
                             <Clock3 className="h-5 w-5" />
                           </div>
                           <h3 className="text-2xl font-bold text-[#132235]">
-                            {t.selectTime}
+                            {t("booking.selectTime")}
                           </h3>
                         </div>
                         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
                           <div>
                             <label className="mb-2 block text-sm font-medium text-[#617183]">
-                              {locale === "ar" ?
-                                "تاريخ الموعد"
-                              : "Appointment Date"}
+                              {t("booking.appointmentDate")}
                             </label>
                             <input
                               type="date"
@@ -2766,9 +2921,7 @@ export function BookingSection({ isRtl = true }) {
                           </div>
                           <div>
                             <label className="mb-2 block text-sm font-medium text-[#617183]">
-                              {locale === "ar" ?
-                                "الموعد المتاح"
-                              : "Available Time"}
+                              {t("booking.availableTime")}
                             </label>
                             <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 lg:grid-cols-3">
                               {timeSlots.map((slot) => {
@@ -2805,14 +2958,14 @@ export function BookingSection({ isRtl = true }) {
                             <FileText className="h-5 w-5" />
                           </div>
                           <h3 className="text-2xl font-bold text-[#132235]">
-                            {t.completeDetails}
+                            {t("booking.completeDetails")}
                           </h3>
                         </div>
                         <div className="grid gap-4 md:grid-cols-2">
                           <div className="md:col-span-2">
                             <label className="mb-2 flex items-center gap-2 text-sm font-medium text-[#617183]">
                               <User className="h-4 w-4" />
-                              {t.fullName}
+                              {t("booking.fullName")}
                             </label>
                             <input
                               type="text"
@@ -2831,7 +2984,7 @@ export function BookingSection({ isRtl = true }) {
                           <div>
                             <label className="mb-2 flex items-center gap-2 text-sm font-medium text-[#617183]">
                               <Phone className="h-4 w-4" />
-                              {t.phone}
+                              {t("booking.phone")}
                             </label>
                             <input
                               type="tel"
@@ -2849,7 +3002,7 @@ export function BookingSection({ isRtl = true }) {
                           <div>
                             <label className="mb-2 flex items-center gap-2 text-sm font-medium text-[#617183]">
                               <Mail className="h-4 w-4" />
-                              {t.email}
+                              {t("booking.email")}
                             </label>
                             <input
                               type="email"
@@ -2860,7 +3013,7 @@ export function BookingSection({ isRtl = true }) {
                           </div>
                           <div>
                             <label className="mb-2 block text-sm font-medium text-[#617183]">
-                              {t.gender}
+                              {t("booking.gender")}
                             </label>
                             <select
                               value={form.gender}
@@ -2868,15 +3021,17 @@ export function BookingSection({ isRtl = true }) {
                               className="w-full rounded-[18px] border border-[#d9e5ee] bg-white p-4 outline-none transition-all focus:border-[#1b9dc4] focus:ring-4 focus:ring-[#1b9dc4]/10"
                             >
                               <option value="">
-                                {locale === "ar" ? "اختر" : "Select"}
+                                {t("booking.selectGender")}
                               </option>
-                              <option value="male">{t.male}</option>
-                              <option value="female">{t.female}</option>
+                              <option value="male">{t("booking.male")}</option>
+                              <option value="female">
+                                {t("booking.female")}
+                              </option>
                             </select>
                           </div>
                           <div>
                             <label className="mb-2 block text-sm font-medium text-[#617183]">
-                              {t.dob}
+                              {t("booking.dob")}
                             </label>
                             <input
                               type="date"
@@ -2888,12 +3043,12 @@ export function BookingSection({ isRtl = true }) {
                           <div className="md:col-span-2">
                             <label className="mb-2 flex items-center gap-2 text-sm font-medium text-[#617183]">
                               <FileText className="h-4 w-4" />
-                              {t.notes}
+                              {t("booking.notes")}
                             </label>
                             <textarea
                               value={form.notes}
                               onChange={(e) => update("notes", e.target.value)}
-                              placeholder={t.notesPlaceholder}
+                              placeholder={t("booking.notesPlaceholder")}
                               className="min-h-[120px] w-full resize-none rounded-[18px] border border-[#d9e5ee] bg-white p-4 outline-none transition-all focus:border-[#1b9dc4] focus:ring-4 focus:ring-[#1b9dc4]/10"
                             />
                           </div>
@@ -2908,7 +3063,7 @@ export function BookingSection({ isRtl = true }) {
                                 className="mt-1 h-4 w-4 rounded border-[#b7c9d8] text-[#1b9dc4] focus:ring-[#1b9dc4]"
                               />
                               <span className="text-sm text-[#5b6d80]">
-                                {t.privacyAgree}
+                                {t("booking.privacyAgree")}
                               </span>
                             </label>
                             {errors.agreePrivacy && (
@@ -2938,19 +3093,15 @@ export function BookingSection({ isRtl = true }) {
                       </div>
                       <div>
                         <p className="text-sm font-medium text-[#7a8b9d]">
-                          {locale === "ar" ?
-                            "الملخص الحالي"
-                          : "Current summary"}
+                          {t("booking.currentSummary")}
                         </p>
                         <h4 className="mt-1 text-lg font-semibold text-[#132235]">
                           {activeSpecialtyLabel}
                         </h4>
                         <p className="mt-1 text-sm text-[#617183]">
                           {form.doctor === "any" ?
-                            t.anyDoctor
-                          : locale === "ar" ?
-                            "سيتم تعيين الطبيب بعد الإرسال."
-                          : "A doctor will be assigned after submission."}
+                            t("booking.anyDoctor")
+                          : t("booking.doctorAssigned")}
                         </p>
                       </div>
                     </div>
@@ -2966,7 +3117,7 @@ export function BookingSection({ isRtl = true }) {
                           {isRtl ?
                             <ChevronRight className="h-5 w-5" />
                           : <ChevronLeft className="h-5 w-5" />}
-                          {t.back}
+                          {t("booking.back")}
                         </button>
                       : <div />}
 
@@ -2975,7 +3126,7 @@ export function BookingSection({ isRtl = true }) {
                           onClick={nextStep}
                           className="flex h-14 items-center gap-2 rounded-full bg-gradient-to-r from-[#1b9dc4] to-[#22b8cf] px-7 font-semibold text-white shadow-[0_16px_30px_rgba(27,157,196,0.24)] transition-all hover:brightness-105"
                         >
-                          {t.next}
+                          {t("booking.next")}
                           {isRtl ?
                             <ChevronLeft className="h-5 w-5" />
                           : <ChevronRight className="h-5 w-5" />}
@@ -2985,7 +3136,7 @@ export function BookingSection({ isRtl = true }) {
                           className="flex h-14 items-center gap-2 rounded-full bg-gradient-to-r from-[#1b9dc4] to-[#22b8cf] px-7 font-semibold text-white shadow-[0_16px_30px_rgba(27,157,196,0.24)] transition-all hover:brightness-105"
                         >
                           <Check className="h-5 w-5" />
-                          {t.submit}
+                          {t("booking.submit")}
                         </button>
                       }
                     </div>
@@ -3002,12 +3153,14 @@ export function BookingSection({ isRtl = true }) {
                   <Check className="h-10 w-10 text-emerald-500" />
                 </div>
                 <h2 className="text-3xl font-bold text-[#132235] md:text-4xl">
-                  {t.successTitle}
+                  {t("booking.successTitle")}
                 </h2>
-                <p className="mt-3 max-w-lg text-[#617183]">{t.successDesc}</p>
+                <p className="mt-3 max-w-lg text-[#617183]">
+                  {t("booking.successDesc")}
+                </p>
                 <div className="mt-8 rounded-[24px] border border-[#dbe8f1] bg-[#f8fcfe] px-6 py-5">
                   <p className="text-sm text-[#7a8b9d]">
-                    {locale === "ar" ? "رقم الحجز" : "Booking reference"}
+                    {t("booking.bookingReference")}
                   </p>
                   <p className="mt-1 text-2xl font-bold text-[#1b9dc4]">
                     {bookingRef}
@@ -3034,7 +3187,7 @@ export function BookingSection({ isRtl = true }) {
                   }}
                   className="mt-8 rounded-full border border-[#1b9dc4] px-7 py-3 font-semibold text-[#1b9dc4] transition-all hover:bg-[#1b9dc4] hover:text-white"
                 >
-                  {t.newBooking}
+                  {t("booking.newBooking")}
                 </button>
               </motion.div>
             }
@@ -3069,10 +3222,10 @@ function Footer({ isRTL, toggleLang, lang }) {
             >
               <div>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
-                  {isRTL ? "موقعنا على الخريطة" : "Find us on the map"}
+                  {t("footer.map.title")}
                 </h3>
                 <p className="text-sm text-slate-500 mt-1">
-                  126 Nile Corniche, Cairo
+                  {t("footer.map.address")}
                 </p>
               </div>
               <div
@@ -3081,7 +3234,7 @@ function Footer({ isRTL, toggleLang, lang }) {
                 }`}
               >
                 <Shield className="w-4 h-4" />
-                <span>{isRTL ? "دخول آمن" : "Secure access"}</span>
+                <span>{t("footer.map.secureAccess")}</span>
               </div>
             </div>
 
@@ -3117,7 +3270,7 @@ function Footer({ isRTL, toggleLang, lang }) {
                       <div className="text-sm font-medium">
                         {hospitalName}
                         <br />
-                        126 Nile Corniche, Cairo
+                        {t("footer.map.address")}
                       </div>
                     </Popup>
                     <Tooltip direction="top" offset={[0, -10]} opacity={1}>
@@ -3134,7 +3287,7 @@ function Footer({ isRTL, toggleLang, lang }) {
             {/* Benefits */}
             <div className="rounded-3xl border border-sky-100 bg-white/80 p-6 backdrop-blur-sm shadow-[0_20px_50px_rgba(15,23,42,0.06)]">
               <h4 className="font-semibold text-sky-700 mb-5">
-                {isRTL ? "مميزات المكان" : "On-site benefits"}
+                {t("footer.benefits.title")}
               </h4>
               <div className="space-y-5">
                 <div
@@ -3145,12 +3298,10 @@ function Footer({ isRTL, toggleLang, lang }) {
                   </div>
                   <div>
                     <div className="font-medium text-slate-900">
-                      {isRTL ? "طوارئ 24/7" : "Emergency 24/7"}
+                      {t("footer.benefits.emergency.title")}
                     </div>
                     <div className="text-sm text-slate-500">
-                      {isRTL ?
-                        "خدمة مستمرة على مدار اليوم"
-                      : "Round-the-clock urgent care"}
+                      {t("footer.benefits.emergency.desc")}
                     </div>
                   </div>
                 </div>
@@ -3162,12 +3313,10 @@ function Footer({ isRTL, toggleLang, lang }) {
                   </div>
                   <div>
                     <div className="font-medium text-slate-900">
-                      {isRTL ? "موقع واضح" : "Clear location"}
+                      {t("footer.benefits.location.title")}
                     </div>
                     <div className="text-sm text-slate-500">
-                      {isRTL ?
-                        "سهولة الوصول بالمواصلات"
-                      : "Easy to reach by transport"}
+                      {t("footer.benefits.location.desc")}
                     </div>
                   </div>
                 </div>
@@ -3177,42 +3326,45 @@ function Footer({ isRTL, toggleLang, lang }) {
             {/* Contact */}
             <div className="rounded-3xl border border-sky-100 bg-white/80 p-6 backdrop-blur-sm shadow-[0_20px_50px_rgba(15,23,42,0.06)]">
               <h4 className="font-semibold text-sky-700 mb-5">
-                {isRTL ? "تواصل سريع" : "Quick contact"}
+                {t("footer.quickContact")}
               </h4>
-              <a className="space-y-4 text-sm text-slate-600">
-                href="tel:+201080761700" className=
-                {`flex items-center gap-3 hover:text-sky-700 transition-colors ${isRTL ? "flex-row-reverse" : ""}`}
-                <Phone className="w-4 h-4 text-sky-500" />
-                <span>+20 108 076 1700</span>
-              </a>
-              <a
-                href="mailto:care@alamed-hospital.com"
-                className={`flex items-center gap-3 hover:text-sky-700 transition-colors ${isRTL ? "flex-row-reverse" : ""}`}
-              >
-                <Mail className="w-4 h-4 text-sky-500" />
-                <span>care@alamed-hospital.com</span>
-              </a>
-              <div
-                className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}
-              >
-                <MapPin className="w-4 h-4 text-sky-500" />
-                <span>126 Nile Corniche, Cairo</span>
+              <div className="space-y-4 text-sm text-slate-600">
+                <a
+                  href="tel:+201080761700"
+                  className={`flex items-center gap-3 hover:text-sky-700 transition-colors ${isRTL ? "flex-row-reverse" : ""}`}
+                >
+                  <Phone className="w-4 h-4 text-sky-500" />
+                  <span>+20 108 076 1700</span>
+                </a>
+                <a
+                  href="mailto:care@alamed-hospital.com"
+                  className={`flex items-center gap-3 hover:text-sky-700 transition-colors ${isRTL ? "flex-row-reverse" : ""}`}
+                >
+                  <Mail className="w-4 h-4 text-sky-500" />
+                  <span>care@alamed-hospital.com</span>
+                </a>
+                <div
+                  className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}
+                >
+                  <MapPin className="w-4 h-4 text-sky-500" />
+                  <span>{t("footer.map.address")}</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom */}
-      <div className="mt-12 pt-8 border-t border-sky-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-slate-500 text-sm">
-          &copy; 2026 Al-Amed Hospital. {t("footer.rights")}
-        </p>
-        <div
-          className={`flex items-center gap-2 text-slate-500 text-sm ${isRTL ? "flex-row-reverse" : ""}`}
-        >
-          <Shield className="w-4 h-4 text-sky-500" />
-          <span>JCI Accredited / ISO 9001</span>
+        {/* Bottom */}
+        <div className="mt-12 pt-8 border-t border-sky-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-slate-500 text-sm">
+            {t("footer.copyright")} {t("footer.rights")}
+          </p>
+          <div
+            className={`flex items-center gap-2 text-slate-500 text-sm ${isRTL ? "flex-row-reverse" : ""}`}
+          >
+            <Shield className="w-4 h-4 text-sky-500" />
+            <span>{t("footer.accreditation")}</span>
+          </div>
         </div>
       </div>
     </footer>
@@ -3282,10 +3434,7 @@ function AIChatbot({ isRTL }) {
         ...prev,
         {
           role: "assistant",
-          content:
-            isRTL ?
-              "حدث خطأ أثناء الاتصال بالخادم."
-            : "Server connection error.",
+          content: t("chatbot.error"),
         },
       ]);
     } finally {
@@ -3582,13 +3731,12 @@ export default function App() {
 
       <main>
         <HeroSection isRTL={isRTL} />
-        <StatsSection isRTL={isRTL} />
-        <SpecialtiesSection isRTL={isRTL} />
+        <SpecialtiesSection />
         <WhyUsSection isRTL={isRTL} />
         <DoctorsSection isRTL={isRTL} />
         <TestimonialsSection isRTL={isRTL} />
         <FAQSection isRTL={isRTL} />
-        <BookingSection isRTL={isRTL} />
+        <BookingSection isRtl={isRTL} />
       </main>
 
       <Footer isRTL={isRTL} toggleLang={toggleLang} lang={lang} />
